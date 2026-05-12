@@ -13,7 +13,7 @@
     <header id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-building-columns"></i>
+                <img src='logo.PNG' style="height: 7%; width: 7%;">
                 <div class="logo-text">INTEGRACIÓN<span>NUEVA UNIVERSIDAD</span></div>
             </a>
             <nav class="nav-links">
@@ -22,6 +22,7 @@
                 <a href="noticias.html">Noticias</a>
                 <a href="propuestas.html">Propuestas</a>
             </nav>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
@@ -32,62 +33,257 @@
             </div>
             
             <div class="auth-grid">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="card-front">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500" class="auth-img" alt="Rector">
-                            <h3 class="auth-name">Dr. Dante Atilio<br>Salas Avila</h3>
-                            <p class="auth-role">Candidato a Rector</p>
+                <!-- Dr. Dante Atilio Salas Ávila -->
+                <div class="auth-card">
+                    <div class="card-image-wrapper">
+                        <img src="dante.jpg" class="auth-img" alt="Dr. Dante Atilio Salas Ávila">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="auth-name">Dr. Dante Atilio<br>Salas Ávila</h3>
+                        <p class="auth-role">
+                            <i class="fas fa-graduation-cap"></i> Candidato a Rector
+                        </p>
+                        <div class="summary-info">
+                            <p><strong>Especialidad:</strong> Ingeniería Metalúrgica y Ambiental</p>
+                            <p><strong>Enfoque:</strong> Contaminación ambiental, tecnologías limpias en minería</p>
                         </div>
-                        <div class="card-back">
-                            <div class="back-content">
-                                <h4>Perfil Académico</h4>
-                                <ul>
-                                    <li><strong>Título Profesional</strong>Ingeniero Metalurgista - UNSA</li>
-                                    <li><strong>Maestría</strong>Tec. Protección Ambiental - UNA</li>
-                                    <li><strong>Doctorado</strong>Ciencia y Medio Ambiente - UNA</li>
-                                </ul>
-                            </div>
+                        <div class="expertise-tags">
+                            <span class="tag">Metallurgia</span>
+                            <span class="tag">Medio Ambiente</span>
+                            <span class="tag">Minería</span>
                         </div>
+                        <button class="btn-more-info" onclick="openModal('dante')">
+                            <i class="fas fa-arrow-right"></i> Más Información
+                        </button>
                     </div>
                 </div>
 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="card-front">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500" class="auth-img" alt="VR Academico">
-                            <h3 class="auth-name">Dr. Javier<br>Mamani Paredes</h3>
-                            <p class="auth-role">VR Académico</p>
+                <!-- Dr. Javier Mamani Paredes -->
+                <div class="auth-card">
+                    <div class="card-image-wrapper">
+                        <img src="javier.png" class="auth-img" alt="Dr. Javier Mamani Paredes">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="auth-name">Dr. Javier<br>Mamani Paredes</h3>
+                        <p class="auth-role">
+                            <i class="fas fa-book"></i> Candidato a VR Académico
+                        </p>
+                        <div class="summary-info">
+                            <p><strong>Especialidad:</strong> Zootecnia y Producción Animal</p>
+                            <p><strong>Enfoque:</strong> Desarrollo sostenible, recursos naturales</p>
                         </div>
-                        <div class="card-back">
-                            <div class="back-content">
-                                <h4>Perfil Académico</h4>
-                                <ul>
-                                    <li><strong>Especialidad</strong>Gestión Curricular</li>
-                                    <li><strong>Maestría</strong>Docencia Universitaria</li>
-                                    <li><strong>Trayectoria</strong>Investigador RENACYT</li>
-                                </ul>
-                            </div>
+                        <div class="expertise-tags">
+                            <span class="tag">Zootecnia</span>
+                            <span class="tag">Agricultura</span>
+                            <span class="tag">RENACYT</span>
                         </div>
+                        <button class="btn-more-info" onclick="openModal('javier')">
+                            <i class="fas fa-arrow-right"></i> Más Información
+                        </button>
                     </div>
                 </div>
 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="card-front">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=500" class="auth-img" alt="VR Investigacion">
-                            <h3 class="auth-name">Dr. Emilio<br>Flores Mamani</h3>
-                            <p class="auth-role">VR de Investigación</p>
+                <!-- Dr. Emilio Flores Mamani -->
+                <div class="auth-card">
+                    <div class="card-image-wrapper">
+                        <img src="emilio.png" class="auth-img" alt="Dr. Emilio Flores Mamani">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="auth-name">Dr. Emilio<br>Flores Mamani</h3>
+                        <p class="auth-role">
+                            <i class="fas fa-microscope"></i> Candidato a VR de Investigación
+                        </p>
+                        <div class="summary-info">
+                            <p><strong>Especialidad:</strong> Ciencias Sociales y Marketing</p>
+                            <p><strong>Enfoque:</strong> Comportamiento organizacional, desarrollo rural</p>
                         </div>
-                        <div class="card-back">
-                            <div class="back-content">
-                                <h4>Perfil Académico</h4>
-                                <ul>
-                                    <li><strong>Investigación</strong>Desarrollo Sostenible</li>
-                                    <li><strong>Doctorado</strong>Ciencia y Tecnología</li>
-                                    <li><strong>Logros</strong>Autor Scopus</li>
-                                </ul>
-                            </div>
+                        <div class="expertise-tags">
+                            <span class="tag">Marketing</span>
+                            <span class="tag">Comunicación</span>
+                            <span class="tag">Investigación</span>
+                        </div>
+                        <button class="btn-more-info" onclick="openModal('emilio')">
+                            <i class="fas fa-arrow-right"></i> Más Información
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Información Detallada -->
+            <div id="modal-dante" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('dante')">&times;</span>
+                    <div class="modal-header">
+                        <img src="dante.jpg" class="modal-img" alt="Dr. Dante Atilio Salas Ávila">
+                        <div>
+                            <h2>Dr. Dante Atilio Salas Ávila</h2>
+                            <p class="modal-role">Profesor Principal de Ingeniería Metalúrgica</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-graduation-cap"></i> Formación Académica</h3>
+                            <ul>
+                                <li><strong>Licenciatura:</strong> Ingeniero Metalurgista - UNSA</li>
+                                <li><strong>Maestría:</strong> Magister Scientiae en Tecnologías de Protección Ambiental - UNA</li>
+                                <li><strong>Doctorado:</strong> Doctoris Scientiae en Ciencia, Tecnología y Medio Ambiente - UNA</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-briefcase"></i> Experiencia</h3>
+                            <ul>
+                                <li>Profesor Principal de Ingeniería Metalúrgica (desde 1997)</li>
+                                <li>Vicerrector Académico (2020-2021)</li>
+                                <li>Director Regional de Energía y Minas (2015-2016, 2021-2022)</li>
+                                <li>Autor de 20+ artículos científicos indexados</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-flask"></i> Líneas de Investigación</h3>
+                            <ul>
+                                <li>Evaluación de contaminación por metales pesados</li>
+                                <li>Tecnologías limpias en minería</li>
+                                <li>Geoquímica ambiental</li>
+                                <li>Calidad de agua y sedimentos</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-trophy"></i> Distinciones</h3>
+                            <p>Diploma de Honor como Director Regional de Energía y Minas</p>
+                        </div>
+                        <div class="modal-links">
+                            <a href="https://orcid.org/0000-0002-7033-2006" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> ORCID Profile
+                            </a>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57299208200" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> Scopus Profile
+                            </a>
+                            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=0019678" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> CTI Vitae Completo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-javier" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('javier')">&times;</span>
+                    <div class="modal-header">
+                        <img src="javier.png" class="modal-img" alt="Dr. Javier Mamani Paredes">
+                        <div>
+                            <h2>Dr. Javier Mamani Paredes</h2>
+                            <p class="modal-role">Decano de Facultad de Ciencias Agrarias</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-graduation-cap"></i> Formación Académica</h3>
+                            <ul>
+                                <li><strong>Licenciatura:</strong> Ingeniero Agrónomo Zootecnista - UNA</li>
+                                <li><strong>Maestría:</strong> Magister Scientiae en Producción Animal - UNA</li>
+                                <li><strong>Doctorado:</strong> Doctoris Scientiae en Ciencia, Tecnología y Medio Ambiente - UNA</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-briefcase"></i> Experiencia</h3>
+                            <ul>
+                                <li>20+ años de experiencia profesional</li>
+                                <li>Profesor Principal UNA Puno (desde 2016)</li>
+                                <li>Decano de Facultad de Ciencias Agrarias (desde 2024)</li>
+                                <li>Investigador RENACYT</li>
+                                <li>Asesor de más de 50 tesis de pregrado y postgrado</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-flask"></i> Líneas de Investigación</h3>
+                            <ul>
+                                <li>Producción animal y desarrollo sostenible</li>
+                                <li>Mejoramiento genético en camélidos</li>
+                                <li>Producción de forrajes</li>
+                                <li>Gestión de recursos naturales</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-trophy"></i> Logros</h3>
+                            <ul>
+                                <li>Autor de 3 libros académicos</li>
+                                <li>Publicaciones en revistas indexadas (Scopus)</li>
+                                <li>Director de múltiples proyectos de investigación</li>
+                                <li>Capacitación en Gestión Pública y TIC</li>
+                            </ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="https://orcid.org/0000-0002-4375-3892" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> ORCID Profile
+                            </a>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=59310903700" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> Scopus Profile
+                            </a>
+                            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=29887" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> CTI Vitae Completo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-emilio" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('emilio')">&times;</span>
+                    <div class="modal-header">
+                        <img src="emilio.png" class="modal-img" alt="Dr. Emilio Flores Mamani">
+                        <div>
+                            <h2>Dr. Emilio Flores Mamani</h2>
+                            <p class="modal-role">Profesor Principal & Director de Investigaciones</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h3><i class="fas fa-graduation-cap"></i> Formación Académica</h3>
+                            <ul>
+                                <li><strong>Licenciatura:</strong> Licenciado en Ciencias de la Comunicación Social - UNA</li>
+                                <li><strong>Maestría:</strong> Maestro en Marketing y Negocios Internacionales - UNFV</li>
+                                <li><strong>Doctorado:</strong> Doctor en Ciencias, Programa de Administración - Universidad de São Paulo, Brasil</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-briefcase"></i> Experiencia</h3>
+                            <ul>
+                                <li>Profesor Principal de pre y postgrado (desde 1998)</li>
+                                <li>Director de Revista Científica COMUNI@CCION (2010-2016)</li>
+                                <li>Decano de Facultad de Ciencias Sociales (2014-2015)</li>
+                                <li>Director del Instituto de Investigaciones Socioeconómicas y Agrobiodiversidad</li>
+                                <li>Autor de 50+ artículos científicos</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-flask"></i> Líneas de Investigación</h3>
+                            <ul>
+                                <li>Marketing y comportamiento del consumidor</li>
+                                <li>Desarrollo organizacional</li>
+                                <li>Comunicación interpersonal</li>
+                                <li>Agrobiodiversidad andina</li>
+                            </ul>
+                        </div>
+                        <div class="modal-section">
+                            <h3><i class="fas fa-trophy"></i> Distinciones</h3>
+                            <ul>
+                                <li>Ganador del Segundo Concurso de Investigación Científica 2013</li>
+                                <li>Honor al Mérito por labor como Decano</li>
+                                <li>Diploma de Reconocimiento por indización de revista científica</li>
+                            </ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="https://orcid.org/0000-0002-0317-6867" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> ORCID Profile
+                            </a>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=59411736500" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> Scopus Profile
+                            </a>
+                            <a href="https://dina.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=5108" target="_blank" class="modal-link">
+                                <i class="fas fa-external-link-alt"></i> CTI Vitae Completo
+                            </a>
                         </div>
                     </div>
                 </div>

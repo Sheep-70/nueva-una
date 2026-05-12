@@ -100,31 +100,50 @@ document.addEventListener("DOMContentLoaded", () => {
         track.innerHTML += clone; 
     }
 
-    // =========================================================
-    // 5. SISTEMA DE PESTAÑAS (TABS) PARA LA PÁGINA DE RECURSOS
-    // =========================================================
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
 
-    if (tabBtns.length > 0) {
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 1. Quitar la clase 'active' de todos los botones y contenidos
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.remove('active'));
-                
-                // 2. Añadir la clase 'active' solo al botón clickeado
-                btn.classList.add('active');
-                
-                // 3. Buscar el contenido asociado usando el "data-target" y mostrarlo
-                const targetId = btn.getAttribute('data-target');
-                const targetContent = document.getElementById(targetId);
-                
-                if (targetContent) {
-                    targetContent.classList.add('active');
+    // =========================================================
+    // 6. SISTEMA DE MODALES PARA INFORMACIÓN DE AUTORIDADES
+    // =========================================================
+    window.openModal = function(person) {
+        const modal = document.getElementById(`modal-${person}`);
+        if (modal) {
+            modal.classList.add('active');
+            // Prevenir scroll cuando el modal está abierto
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    window.closeModal = function(person) {
+        const modal = document.getElementById(`modal-${person}`);
+        if (modal) {
+            modal.classList.remove('active');
+            // Reactivar el scroll
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+    // Cerrar modal cuando se hace clic fuera del contenido
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === this) {
+                // Obtener el ID del modal y extraer el nombre de la persona
+                const personName = this.id.replace('modal-', '');
+                closeModal(personName);
+            }
+        });
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    const personName = modal.id.replace('modal-', '');
+                    closeModal(personName);
                 }
             });
-        });
-    }
+        }
+    });
 
 });
