@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="logo.PNG" type="image/x-icon">
 </head>
 <body class="home-page">
 
@@ -38,9 +39,12 @@
         
         <div class="slide" style="background-image: url('IMG2.jpg');">
             <div class="hero-content">
-                <h1>Innovación para el Futuro Académico</h1>
-                <p>Nuestras propuestas están diseñadas para transformar cada facultad con tecnología y modernidad.</p>
-                <a href="propuestas.html" class="btn btn-red">Ver Propuestas</a>
+                <h1>El respaldo de toda una universidad</h1>
+                <p style="background: linear-gradient(90deg, goldenrod 0%, #d4af37 100%); padding: 15px; border-radius: 8px; color: #fff; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">Somos más de <span id="docentesCount">1,500</span> docentes y más de <span id="estudiantesCount">12,000</span> estudiantes comprometidos con la transformación académica.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+                    <button onclick="incrementDocentes()" class="btn btn-red"><i class="fas fa-thumbs-up"></i> Únete - Docente</button>
+                    <button onclick="incrementEstudiantes()" class="btn btn-red"><i class="fas fa-thumbs-up"></i> Únete - Estudiante</button>
+                </div>
             </div>
         </div>
 
@@ -50,7 +54,36 @@
         </div>
     </section>
 
-    <section class="section-padding bg-light" id="recursos-resumen">
+    <section class=" bg-light" id="recursos-resumen">
+        <div class="container">
+            <div class="center-title">
+            <h2>Últimas Noticias y Eventos</h2>
+            </div>
+            <div class="grid-3">
+                <article class="news-item">
+                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600');"></div>
+                    <div class="news-body">
+                        <span class="news-tag">Evento</span>
+                        <h4>Gran encuentro en la Facultad de Ingeniería</h4>
+                        <p>El Dr. Dante Salas compartió su visión sobre la modernización de laboratorios ante cientos de estudiantes.</p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1454165833767-02654a5950d7?q=80&w=600');"></div>
+                    <div class="news-body">
+                        <span class="news-tag">Gestión</span>
+                        <h4>Plan de Transparencia 2026 presentado</h4>
+                        <p>Se anunciaron las medidas de auditoría externa que se implementarán en los primeros 100 días de gestión.</p>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="noticias.html" class="btn btn-red">Ver más Noticias</a>
+            </div>
+        </div>
+    </section>
+
+    <section class=" bg-light" id="recursos-resumen">
         <div class="container">
             <div class="center-title">
                 <h2>Recursos y Descargas</h2>
@@ -76,7 +109,7 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 50px;">
-                <a href="recursos.html" class="btn btn-red">Ir al Repositorio Completo</a>
+                <!--<a href="recursos.html" class="btn btn-red">Ir al Repositorio Completo</a>-->
             </div>
         </div>
     </section>

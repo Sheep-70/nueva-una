@@ -1,6 +1,93 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // =========================================================
+    // 0. CONTADORES DE DOCENTES Y ESTUDIANTES
+    // =========================================================
+    const DOCENTES_KEY = 'docentesCounter';
+    const ESTUDIANTES_KEY = 'estudiantesCounter';
+    const INITIAL_DOCENTES = 1500;
+    const INITIAL_ESTUDIANTES = 12000;
+    
+    // Función para cargar contadores del localStorage
+    function loadDocentes() {
+        const stored = localStorage.getItem(DOCENTES_KEY);
+        return stored ? parseInt(stored) : INITIAL_DOCENTES;
+    }
+    
+    function loadEstudiantes() {
+        const stored = localStorage.getItem(ESTUDIANTES_KEY);
+        return stored ? parseInt(stored) : INITIAL_ESTUDIANTES;
+    }
+    
+    // Función para guardar contadores
+    function saveDocentes(count) {
+        localStorage.setItem(DOCENTES_KEY, count);
+    }
+    
+    function saveEstudiantes(count) {
+        localStorage.setItem(ESTUDIANTES_KEY, count);
+    }
+    
+    // Función para formatear número con separador de miles
+    function formatNumber(num) {
+        return num.toLocaleString('es-ES');
+    }
+    
+    // Función para incrementar docentes
+    window.incrementDocentes = function() {
+        let currentCount = loadDocentes();
+        currentCount++;
+        saveDocentes(currentCount);
+        
+        const docentesDisplay = document.getElementById('docentesCount');
+        if (docentesDisplay) {
+            docentesDisplay.textContent = formatNumber(currentCount);
+            // Efecto visual
+            docentesDisplay.style.transform = 'scale(1.2)';
+            docentesDisplay.style.color = '#FFD700';
+            setTimeout(() => {
+                docentesDisplay.style.transform = 'scale(1)';
+                docentesDisplay.style.color = 'white';
+            }, 300);
+        }
+    };
+    
+    // Función para incrementar estudiantes
+    window.incrementEstudiantes = function() {
+        let currentCount = loadEstudiantes();
+        currentCount++;
+        saveEstudiantes(currentCount);
+        
+        const estudiantesDisplay = document.getElementById('estudiantesCount');
+        if (estudiantesDisplay) {
+            estudiantesDisplay.textContent = formatNumber(currentCount);
+            // Efecto visual
+            estudiantesDisplay.style.transform = 'scale(1.2)';
+            estudiantesDisplay.style.color = '#FFD700';
+            setTimeout(() => {
+                estudiantesDisplay.style.transform = 'scale(1)';
+                estudiantesDisplay.style.color = 'white';
+            }, 300);
+        }
+    };
+    
+    // Cargar contadores al iniciar la página
+    const docentesDisplay = document.getElementById('docentesCount');
+    const estudiantesDisplay = document.getElementById('estudiantesCount');
+    
+    if (docentesDisplay) {
+        docentesDisplay.textContent = formatNumber(loadDocentes());
+        docentesDisplay.style.transition = 'all 0.3s ease';
+        docentesDisplay.style.fontWeight = 'bold';
+    }
+    
+    if (estudiantesDisplay) {
+        estudiantesDisplay.textContent = formatNumber(loadEstudiantes());
+        estudiantesDisplay.style.transition = 'all 0.3s ease';
+        estudiantesDisplay.style.fontWeight = 'bold';
+    }
+    
+    // =========================================================
     // 1. EFECTO DEL HEADER AL HACER SCROLL (Solo en página de inicio)
     // =========================================================
     const body = document.body;

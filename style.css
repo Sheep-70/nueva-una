@@ -536,8 +536,17 @@ footer { background: #1a1a1a; color: var(--blanco); padding: 80px 0 30px; margin
     .nav-links a { color: var(--azul) !important; text-align: center; padding: 10px; }
     .menu-toggle { display: block; }
     
-    /* Ajustes Generales */
+    /* ========== HERO - IMÁGENES RESPONSIVAS ========== */
+    /* Cambiar imagen del primer slide en móvil para mejor visualización */
+    .slide-1 {
+        background-image: url('IMG4.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
     .hero-content h1 { font-size: 2.2rem; }
+    
+    /* Ajustes Generales */
     .section-padding { padding: 60px 0; }
     .center-title { padding-top: 60px; margin-bottom: 40px; }
     .center-title h2 { font-size: 2rem; }
@@ -563,4 +572,34 @@ footer { background: #1a1a1a; color: var(--blanco); padding: 80px 0 30px; margin
     /* Recursos */
     .resource-item { flex-direction: column; align-items: flex-start; gap: 20px; }
     .btn-download { width: 100%; justify-content: center; }
+}
+
+/* ================= DISEÑO PARA SMARTPHONES PEQUEÑOS (max 600px) ================= */
+@media (max-width: 600px) {
+    /* Hero mejorado para pantallas muy pequeñas */
+    .hero { height: 80vh; }
+    .hero-content h1 { font-size: 1.8rem; margin-top: 3rem; }
+    .hero-content p { font-size: 1rem; }
+    
+    /* Asegurar que la imagen se muestre bien en smartphones */
+    .slide-1 {
+        background-image: url('IMG4.jpg') !important;
+        background-attachment: scroll;
+        background-position: center center !important;
+    }
+    
+    .slide {
+        background-attachment: scroll;
+        background-position: center center;
+    }
+    
+    /* Botones más grandes para touch */
+    .btn { padding: 12px 28px; font-size: 0.85rem; }
+    .btn-more-info { padding: 10px 18px; font-size: 0.8rem; }
+    
+    /* Noticias */
+    .grid-3 { grid-template-columns: 1fr; }
+    
+    /* Carrusel de equipos */
+    .team-card { min-width: 200px; padding: 20px; }
 }
