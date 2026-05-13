@@ -547,6 +547,73 @@ body.home-page header.scrolled .menu-toggle { color: var(--azul); }
     font-weight: 500;
 }
 
+/* ================= WHATSAPP FLOATING BUTTON ================= */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #25D366 0%, #1faa51 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 2.2rem;
+    z-index: 1100;
+    transition: var(--transition);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    border: 3px solid var(--blanco);
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.15) rotate(-15deg);
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #1faa51 0%, #128C45 100%);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--blanco);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: var(--transition);
+    pointer-events: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 2px solid var(--amarillo);
+}
+
+.whatsapp-button:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile WhatsApp Button */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .whatsapp-tooltip {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
+
 /* ================= RECURSOS ================= */
 /* Vista Resumen (Home) */
 .resource-card-mini { 
