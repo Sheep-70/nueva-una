@@ -443,6 +443,7 @@ body.home-page header.scrolled .menu-toggle { color: var(--azul); }
 
 /* ================= GRID GENERAL (Noticias, Propuestas, Recursos) ================= */
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
 /* Noticias */
 .news-item { background: var(--blanco); border-radius: 15px; overflow: hidden; box-shadow: var(--sombra); transition: var(--transition); }
@@ -453,13 +454,98 @@ body.home-page header.scrolled .menu-toggle { color: var(--azul); }
 .news-item h4 { margin: 10px 0; color: var(--azul); font-size: 1.2rem; line-height: 1.3;}
 .news-item p { font-size: 0.9rem; color: #666; }
 
-/* Propuestas */
-.prop-card { background: var(--gris-fondo); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--sombra); transition: var(--transition);}
-.prop-card:hover { transform: translateY(-5px); background: var(--blanco); border: 1px solid var(--rojo);}
-.prop-card i { font-size: 3rem; color: var(--azul); margin-bottom: 20px; transition: var(--transition); }
-.prop-card:hover i { color: var(--rojo); }
-.prop-card h3 { color: var(--azul); margin-bottom: 15px; font-weight: 800;}
-.prop-card p { color: #555; line-height: 1.6; }
+/* Propuestas - Mejoradas con diseño moderno */
+.prop-card {
+    background: linear-gradient(135deg, #F8F9FF 0%, var(--gris-fondo) 100%);
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+}
+
+.prop-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--azul) 0%, var(--rojo) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prop-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--azul) 50%, transparent 100%);
+}
+
+.prop-card:hover::before {
+    transform: scaleX(1);
+}
+
+.prop-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(13, 71, 161, 0.2);
+    background: linear-gradient(135deg, var(--blanco) 0%, #F5F7FF 100%);
+    border: 2px solid var(--azul);
+}
+
+.prop-card i {
+    font-size: 3.8rem;
+    color: var(--azul);
+    margin-bottom: 25px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.12) 0%, rgba(13, 71, 161, 0.05) 100%);
+    border-radius: 50%;
+    border: 3px solid rgba(13, 71, 161, 0.2);
+}
+
+.prop-card:hover i {
+    color: var(--rojo);
+    transform: scale(1.2) rotate(12deg);
+    background: linear-gradient(135deg, rgba(198, 40, 40, 0.15) 0%, rgba(198, 40, 40, 0.08) 100%);
+    border-color: rgba(198, 40, 40, 0.3);
+    box-shadow: 0 10px 30px rgba(198, 40, 40, 0.2);
+}
+
+.prop-card h3 {
+    color: var(--azul);
+    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.prop-card p {
+    color: #555;
+    line-height: 1.75;
+    font-size: 0.97rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
 
 /* ================= RECURSOS ================= */
 /* Vista Resumen (Home) */
@@ -599,6 +685,7 @@ footer { background: #1a1a1a; color: var(--blanco); padding: 80px 0 30px; margin
     
     /* Noticias */
     .grid-3 { grid-template-columns: 1fr; }
+    .grid-5 { grid-template-columns: 1fr; }
     
     /* Carrusel de equipos */
     .team-card { min-width: 200px; padding: 20px; }
