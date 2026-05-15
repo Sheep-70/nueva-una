@@ -14,8 +14,7 @@
     <header id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src='logo.PNG' style="height: 7%; width: 7%;">
-                <div class="logo-text">INTEGRACIÓN<span>NUEVA UNIVERSIDAD</span></div>
+                <img src='logo.PNG' style="height: 50px; width: auto;"> <div class="logo-text">INTEGRACIÓN<span>NUEVA UNIVERSIDAD</span></div>
             </a>
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
@@ -30,14 +29,14 @@
 
     <section class="section-padding">
         <div class="container">
-            <div class="center-title">
+            <div class="center-title" style="text-align: center; margin-bottom: 40px;">
                 <h2>Repositorio Institucional</h2>
                 <p style="margin-top: 15px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Accede de forma transparente a todos nuestros documentos oficiales, material de difusión y normativa vigente.
                 </p>
             </div>
 
-            <div class="tabs-header">
+            <div class="tabs-header" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px;">
                 <button class="tab-btn active" data-target="tab-oficial">Documentos Oficiales</button>
                 <button class="tab-btn" data-target="tab-multimedia">Material de Campaña</button>
                 <button class="tab-btn" data-target="tab-normativa">Normativa y Estatutos</button>
@@ -57,47 +56,30 @@
                             </div>
                             <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Descargar</a>
                         </div>
-                        <div class="resource-item">
-                            <div class="resource-info">
-                                <i class="fa-solid fa-file-pdf"></i>
-                                <div>
-                                    <div class="resource-title">Hoja de Vida: Dr. Dante Salas Avila</div>
-                                    <div class="resource-meta">PDF • 1.5 MB • Resumen ejecutivo</div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Descargar</a>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-info">
-                                <i class="fa-solid fa-file-excel" style="color: #2E7D32;"></i>
-                                <div>
-                                    <div class="resource-title">Proyección de Presupuesto Participativo</div>
-                                    <div class="resource-meta">XLSX • 850 KB • Transparencia</div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Descargar</a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="tab-content" id="tab-multimedia">
+                <div class="tab-content" id="tab-multimedia" style="display: none;">
                     <div class="resource-list">
+                        <div class="resource-item" style="border: 2px solid #ffcc00; background: rgba(255, 204, 0, 0.05);">
+                            <div class="resource-info">
+                                <i class="fa-solid fa-gamepad" style="color: #e63946; font-size: 2rem;"></i>
+                                <div>
+                                    <div class="resource-title" style="font-weight: 800; color: #b22222;">VIDEOJUEGO: SALVA A LA UNAP</div>
+                                    <div class="resource-meta">APP ANDROID • 45 MB • ¡Vence a los demás partidos!</div>
+                                </div>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1FqQCHdmdu_qZVOSX5aofEYzk_xrowx38/view?usp=drive_link" target="_blank" class="btn-download" style="background: linear-gradient(45deg, #b22222, #ff4500); color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+                                <i class="fa-solid fa-rocket"></i> ¡INSTALAR AHORA!
+                            </a>
+                        </div>
+
                         <div class="resource-item">
                             <div class="resource-info">
                                 <i class="fa-solid fa-file-zipper" style="color: #F57F17;"></i>
                                 <div>
-                                    <div class="resource-title">Logotipo Oficial (Vectores e Imágenes)</div>
-                                    <div class="resource-meta">ZIP • 12 MB • Contiene AI, PNG, SVG</div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Descargar</a>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-info">
-                                <i class="fa-solid fa-image" style="color: #1565C0;"></i>
-                                <div>
-                                    <div class="resource-title">Afiche Oficial de Campaña (A3)</div>
-                                    <div class="resource-meta">PDF (Impresión) • 8.5 MB</div>
+                                    <div class="resource-title">Logotipo Oficial (Vectores)</div>
+                                    <div class="resource-meta">ZIP • 12 MB</div>
                                 </div>
                             </div>
                             <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Descargar</a>
@@ -105,21 +87,11 @@
                     </div>
                 </div>
 
-                <div class="tab-content" id="tab-normativa">
+                <div class="tab-content" id="tab-normativa" style="display: none;">
                     <div class="resource-list">
                         <div class="resource-item">
                             <div class="resource-info">
                                 <i class="fa-solid fa-book" style="color: #455A64;"></i>
-                                <div>
-                                    <div class="resource-title">Ley Universitaria (Ley N° 30220)</div>
-                                    <div class="resource-meta">PDF • Enlace externo</div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-download"><i class="fa-solid fa-eye"></i> Leer</a>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-info">
-                                <i class="fa-solid fa-file-pdf"></i>
                                 <div>
                                     <div class="resource-title">Estatuto de la Universidad</div>
                                     <div class="resource-meta">PDF • 3.1 MB</div>
@@ -134,38 +106,21 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h3>INTEGRACIÓN</h3>
-                    <p>Movimiento universitario líder comprometido con la renovación institucional y la transparencia.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="autoridades.html">Autoridades</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fa-solid fa-location-dot"></i> Ciudad Universitaria</p>
-                    <p><i class="fa-solid fa-envelope"></i> informes@integracion2026.pe</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Integración Nueva Universidad. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-        <!-- WhatsApp Floating Button -->
-    <a href="https://whatsapp.com/channel/0029Vb7whkpGZNCpjWD9Yt07" target="_blank" class="whatsapp-button" title="Únete a nuestro canal">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Únete a nuestro canal</span>
-    </a>
-
-    <script src="main.js"></script>
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.getAttribute('data-target');
+                
+                // Quitar active de botones
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                // Ocultar todos los contenidos
+                document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+                
+                // Activar actual
+                button.classList.add('active');
+                document.getElementById(target).style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
