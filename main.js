@@ -233,4 +233,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // para activar el audio al hacer clic en cualquier parte de la página (en caso de que el autoplay no funcione por restricciones del navegador)
+    window.addEventListener('click', () => {
+        const audio = document.getElementById('background-music');
+        audio.muted = false; // Quita el silencio automáticamente al interactuar
+        audio.play();
+    }, { once: true }); // El {once: true} hace que esto solo pase una vez
+
 });
