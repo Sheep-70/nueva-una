@@ -739,62 +739,6 @@ body.home-page header.scrolled .menu-toggle { color: var(--azul); }
     }
 }
 
-/* ================= RESPONSIVE - ASAMBLEA UNIVERSITARIA ================= */
-@media (max-width: 992px) {
-    .assembly-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    
-    .assembly-name {
-        font-size: 1rem;
-    }
-    
-    .assembly-card {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-}
-
-@media (max-width: 768px) {
-    .assembly-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 18px;
-    }
-    
-    .assembly-card-content {
-        padding: 18px 16px;
-    }
-    
-    .assembly-icon {
-        font-size: 2rem;
-        width: 45px;
-        height: 45px;
-    }
-    
-    .assembly-name {
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-    }
-    
-    .assembly-role {
-        font-size: 0.75rem;
-        margin-bottom: 8px;
-    }
-    
-    .assembly-faculty {
-        font-size: 0.8rem;
-        margin-bottom: 8px;
-    }
-    
-    .assembly-phrase {
-        font-size: 0.8rem;
-    }
-    
-    .assembly-card:hover {
-        transform: translateY(-10px) scale(1.02);
-    }
-}
-
 /* ================= TABLA DE DOCENTES ================= */
 .teachers-table-wrapper {
     overflow-x: auto;
