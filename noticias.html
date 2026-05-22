@@ -34,20 +34,31 @@
                 <h2>Últimas Noticias y Eventos</h2>
             </div>
             <div class="grid-3">
+                <!-- PRIMERA NOTICIA (CON VIDEO) -->
                 <article class="news-item">
-                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600');"></div>
+                    <!-- Usamos el truco de overflow hidden para que el video respete los bordes de la tarjeta -->
+                    <div class="news-img" style="height: 350px; overflow: hidden;">
+                        <!-- Usamos width y height al 100% para que se adapte al ordenador y al móvil solo -->
+                        <video controls loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="videonoticia.mp4#t=1.58" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
                     <div class="news-body">
-                        <span class="news-tag">Evento</span>
-                        <h4>Gran encuentro en la Facultad de Ingeniería</h4>
-                        <p>El Dr. Dante Salas compartió su visión sobre la modernización de laboratorios ante cientos de estudiantes.</p>
+                        <span class="news-tag">RESPALDO TOTAL</span>
+                        <h4>¡La comunidad universitaria se une al cambio!</h4>
+                        <p>Estudiantes, docentes y egresados de todas las facultades manifiestan su respaldo contundente a nuestro proyecto estudiantil.</p>
                     </div>
                 </article>
+
+                <!-- SEGUNDA NOTICIA (CON IMAGEN) -->
                 <article class="news-item">
-                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1454165833767-02654a5950d7?q=80&w=600');"></div>
+                    <!-- Le quitamos el width fijo de 450px y dejamos que el grid maneje el ancho con el width: 100% del CSS existente (o inline) -->
+                    <div class="news-img" style="background-image: url('noticia1.jpeg'); height: 350px;"></div>
                     <div class="news-body">
-                        <span class="news-tag">Gestión</span>
-                        <h4>Plan de Transparencia 2026 presentado</h4>
-                        <p>Se anunciaron las medidas de auditoría externa que se implementarán en los primeros 100 días de gestión.</p>
+                        <span class="news-tag">EVENTO</span>
+                        <h4>Asamblea General</h4>
+                        <p>El evento concluyó con un éxito rotundo y una convocatoria multitudinaria. Toda la comunidad universitaria se hizo presente, demostrando una sólida unión. ¡La comunidad universitaria ya decidió!</p>
                     </div>
                 </article>
             </div>
